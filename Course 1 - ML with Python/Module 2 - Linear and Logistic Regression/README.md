@@ -99,12 +99,3 @@ Module 2 explores **Regression** as a supervised learning technique, covering **
 ✅ **Logistic regression transforms outputs into probabilities, making it useful for binary classification.**  
 ✅ **Model evaluation metrics like MSE, R-squared, and Log-Loss are crucial for assessing performance.**  
 ✅ **Gradient Descent and its variations optimize regression models efficiently.**
-
----
-
-## **Related Labs**
-
-📌 **[Linear Regression Notebook](./Linear-Regression/Labs/)**  
-📌 **[Logistic Regression Notebook](./Logistic-Regression/Labs/)**
-
----
