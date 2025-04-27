@@ -1,79 +1,79 @@
-# Introduction to Deep Learning & Neural Networks with Keras
+# 📚 Introduction to Deep Learning & Neural Networks with Keras
 
-This repository contains notes, labs, and code for the course **Introduction to Deep Learning & Neural Networks with Keras**, part of the AI Engineer Professional Certificate by IBM. The course covers the core concepts of deep learning and how to build and train neural networks using the Keras library in Python.
+This repository contains notes, labs, and code implementations for the course **Introduction to Deep Learning & Neural Networks with Keras**, part of the **AI Engineer Professional Certificate by IBM**.
 
-All content is organized by module, and includes a mix of theoretical summaries and hands-on implementations.
-
----
-
-## 🧠 Course Description
-
-The course introduces the fundamentals of deep learning and artificial neural networks, along with the tools and techniques used to implement them. It starts with basic concepts such as neurons, forward propagation, and activation functions, then progresses into training techniques like backpropagation and gradient descent.
-
-Throughout the course, Keras is used to build both simple and advanced models, including convolutional neural networks (CNNs), recurrent neural networks (RNNs), autoencoders, and transformers. While some advanced topics are introduced, they are presented in a simplified way suitable for learners starting out in deep learning.
+The course introduces the fundamentals of deep learning and artificial neural networks, emphasizing how to build and train models using the **Keras** library in Python.  
+All content is organized by module, including theoretical summaries, key concepts, and practical labs.
 
 ---
 
-## 🎯 Learning Objectives
+## 📌 Course Overview
 
-Upon completing the course, the following skills are developed:
-
-- Understanding the difference between neural networks and deep learning models
-- Implementing deep learning models using the Keras library
-- Applying supervised learning models such as CNNs and RNNs
-- Working with unsupervised models such as autoencoders, transformers, and restricted Boltzmann machines
-
----
-
-## 🧩 Course Structure
-
-The course is divided into five modules:
-
-### **Module 1: Introduction to Deep Learning and Neural Networks**
-
-- Overview of deep learning applications and relevance
-- Biological and artificial neurons
-- How data is passed forward in a neural network
-- **Lab:** Build a simple artificial neural network and implement forward propagation
-
-### **Module 2: Basics of Deep Learning**
-
-- How neural networks learn using gradient descent and backpropagation
-- Vanishing gradient problem and solutions
-- Activation functions
-- **Lab:** Use ReLU to address vanishing gradients
-
-### **Module 3: Keras and Deep Learning Libraries**
-
-- Introduction to TensorFlow, PyTorch, and Keras
-- Building regression and classification models with Keras
-- **Lab:** Implement models using Keras for both tasks
-
-### **Module 4: Deep Learning Models**
-
-- Shallow vs deep networks
-- Supervised learning models: CNNs and RNNs
-- Unsupervised models: transformers and autoencoders
-- **Lab:** Use Keras to implement CNNs and transformers
-
-### **Module 5: Final Project and Wrap-up**
-
-- Final project: object detection with CNNs and caption generation with transformers
-- Course summary and additional resources
+- Understand how deep learning differs from traditional machine learning.
+- Explore the architecture and working principles behind neural networks.
+- Build and train deep learning models using **Keras**.
+- Work with both **supervised models** (CNNs, RNNs) and **unsupervised models** (Autoencoders, Transformers).
+- Apply learned features through **transfer learning** and **fine-tuning pre-trained models**.
 
 ---
 
-## 🛠️ Tools and Libraries
+## 🧩 Modules and Topics
 
-The following technologies are used throughout the course:
+### 1️⃣ Module 1 – Introduction to Deep Learning and Neural Networks
 
-- Python
-- Jupyter Notebooks
-- NumPy
-- Pandas
-- Matplotlib
-- Keras
+- Applications and significance of deep learning.
+- Biological inspiration for artificial neurons.
+- Structure of a basic neural network and forward propagation process.
+- **Lab:** Build and understand a simple artificial neural network.
 
 ---
 
-Each module has its own folder containing notes, lab code, and implementations.
+### 2️⃣ Module 2 – Basics of Deep Learning
+
+- How neural networks learn: gradient descent and backpropagation.
+- Challenges like the **vanishing gradient problem** and activation function solutions (ReLU).
+- Importance of activation functions in non-linear transformations.
+- **Lab:** Mitigate vanishing gradients using ReLU activations.
+
+---
+
+### 3️⃣ Module 3 – Keras and Deep Learning Libraries
+
+- Overview of popular deep learning libraries: **TensorFlow**, **PyTorch**, and **Keras**.
+- Building regression and classification models with Keras.
+- Dataset preparation, model compilation, and evaluation workflows.
+- **Lab:** Implement regression and classification models using Keras.
+
+---
+
+### 4️⃣ Module 4 – Deep Learning Models
+
+- Difference between **shallow** and **deep** neural networks.
+- Building and training:
+  - **Convolutional Neural Networks (CNNs)** for image data.
+  - **Recurrent Neural Networks (RNNs)** and **LSTMs** for sequential data.
+  - **Transformers** using self-attention and cross-attention mechanisms.
+  - **Autoencoders** for compression and reconstruction of input data.
+- Using **pre-trained models** (e.g., VGG16) as feature extractors and fine-tuning them for new tasks.
+- **Lab:** Implement CNNs and transformer-based models using Keras.
+
+---
+
+### 5️⃣ Module 5 – Final Project and Wrap-up
+
+- Apply learned techniques in a project combining:
+  - **Object detection** using CNNs.
+  - **Caption generation** using Transformers.
+- Summarize concepts and explore additional learning resources.
+
+---
+
+## 🛠 Tools and Technologies
+
+- **Python**
+- **Jupyter Notebooks**
+- **Keras** (with TensorFlow backend)
+- **NumPy**
+- **Pandas**
+- **Matplotlib**
+- **Pre-trained models** (VGG16, ResNet)
