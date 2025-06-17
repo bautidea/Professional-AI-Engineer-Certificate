@@ -71,7 +71,7 @@ Enabling mixed precision is done by setting a global policy, which allows Tensor
 
 ---
 
-## ✅ Key Concepts Recap
+## 🔑 Key Concepts Recap
 
 - Custom training loops give full control over the training process using `tf.GradientTape`.
 - Custom layers let you build reusable blocks for unique architectures.
