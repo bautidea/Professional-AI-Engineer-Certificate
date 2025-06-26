@@ -1,10 +1,10 @@
-# 📚 Deep Learning with TensorFlow and Keras
+# 📚 Course 3 – Advanced Deep Learning with TensorFlow and Keras
 
 Welcome to the course **Deep Learning with TensorFlow and Keras**, part of the **AI Engineer Professional Certificate by IBM**.
 
-In this course, I explored advanced deep learning techniques using the powerful combination of **TensorFlow** and **Keras**. The course focuses on mastering model customization, handling complex data types (like images and sequences), and building state-of-the-art architectures for classification, generation, and reinforcement learning.
+The course focuses on mastering model customization, handling complex data types (like images and sequences), and building architectures for classification, generation, and reinforcement learning.
 
-All modules include practical labs that allowed me to experiment with the tools and techniques in realistic scenarios, using Python and Jupyter Notebooks.
+Across six modules, the course explores custom training workflows, convolutional architectures, Transformer encoders, generative models for unsupervised learning, advanced optimization strategies, and reinforcement learning using Deep Q-Networks.
 
 ---
 
@@ -21,55 +21,77 @@ All modules include practical labs that allowed me to experiment with the tools 
 
 ---
 
-## 🧩 Course Modules and Topics
+## 🧠 Key Concepts by Module
 
-### 1️⃣ Advanced Keras Functionalities
+### 🔧 Module 1 – Advanced Keras Functionalities
 
-- Use the **Functional API** to create non-linear, multi-input/multi-output architectures.
-- Develop **custom layers and models** in Keras.
-- Leverage **TensorFlow 2.x integration** for advanced functionality.
-
-### 2️⃣ Advanced CNNs in Keras
-
-- Build advanced **Convolutional Neural Networks** (CNNs).
-- Perform **data augmentation** to improve generalization.
-- Use **transfer learning** with pre-trained models.
-- Enhance image processing workflows with TensorFlow.
-
-### 3️⃣ Transformers in Keras
-
-- Train and fine-tune **Transformer models** for sequential data and time series.
-- Implement **advanced attention mechanisms** for **text generation**.
-- Understand and apply **self-attention** and **embedding techniques**.
-
-### 4️⃣ Unsupervised Learning and Generative Models
-
-- Implement **Autoencoders** and **Diffusion Models** for feature learning and data reconstruction.
-- Develop **Generative Adversarial Networks (GANs)** to synthesize realistic data.
-- Use Keras and TensorFlow to build **unsupervised pipelines**.
-
-### 5️⃣ Advanced Training Techniques
-
-- Build **custom training loops** using TensorFlow and Keras.
-- Use **Keras Tuner** for hyperparameter optimization.
-- Learn **model optimization workflows** and advanced evaluation techniques.
-
-### 6️⃣ Reinforcement Learning with Keras
-
-- Understand the basics of **Reinforcement Learning (RL)**.
-- Implement **Q-Learning** algorithms with Keras.
-- Train **Deep Q Networks (DQNs)** for sequential decision-making tasks.
-
-### 7️⃣ Final Project and Assessment
-
-- Integrate all skills into a **classification model project**.
-- Apply CNNs, Transformers, and optimization techniques to solve a realistic problem using Keras.
+- Implemented custom training loops using `GradientTape` for full control of model training logic.
+- Used the Functional API and `Model` subclassing to construct reusable architectures.
+- Built custom layers with the `Layer` class, defining behavior in `build()` and `call()`.
+- Created custom callbacks and training metrics to manage training feedback and control flow.
+- Combined all techniques in an end-to-end training pipeline.
 
 ---
 
-## 🛠 Tools and Technologies
+### 🌀 Module 2 – Advanced CNNs in Keras
 
-- **Python** & **Jupyter Notebooks**
-- **TensorFlow** and **Keras**
-- **Keras Tuner** for hyperparameter tuning
-- Git and GitHub for version control and code sharing
+- Designed convolutional networks for image classification using Conv2D, ReLU, and pooling layers.
+- Applied dropout to prevent overfitting and used batch normalization to stabilize training.
+- Managed training with callbacks: model checkpointing and early stopping.
+- Monitored training metrics with TensorBoard.
+- Built a complete ConvNet architecture on the Fashion MNIST dataset.
+
+---
+
+### 🔁 Module 3 – Transformers in Keras
+
+- Implemented a Transformer encoder architecture with multi-head self-attention and feedforward layers.
+- Constructed positional encodings to retain sequence information in tokenized inputs.
+- Applied masking techniques (padding and look-ahead) to guide attention behavior.
+- Created a full Transformer model from scratch for classification tasks.
+- Used `TextVectorization` to preprocess and embed text sequences for training.
+
+---
+
+### 🎨 Module 4 – Unsupervised Learning and Generative Models in Keras
+
+- Trained autoencoders for dimensionality reduction and feature reconstruction tasks.
+- Implemented a basic diffusion model using a U-Net-inspired architecture.
+- Built and trained GANs for generating synthetic MNIST digits.
+- Used visual inspection (clarity, coherence, diversity) and metrics (discriminator accuracy) to evaluate GAN outputs.
+- Applied adversarial training techniques including label smoothing and normalization.
+
+---
+
+### ⚙️ Module 5 – Advanced Keras Techniques
+
+- Developed custom training logic with `GradientTape` and manual metric tracking.
+- Created specialized layers and custom `Callback` classes for dynamic control during training.
+- Tuned model hyperparameters using Keras Tuner (RandomSearch) with parameterized model definitions.
+- Applied model optimization techniques:
+  - He weight initialization
+  - Learning rate scheduling
+  - Mixed precision training
+  - TensorFlow Model Optimization Toolkit for pruning and quantization
+- Trained smaller student models via knowledge distillation to match the outputs of large teacher networks.
+
+---
+
+### 🧠 Module 6 – Introduction to Reinforcement Learning with Keras
+
+- Introduced reinforcement learning concepts: agents, environments, actions, states, and rewards.
+- Implemented Q-learning using the Q-value function `Q(s, a)` and the Bellman equation.
+- Built a neural Q-network in Keras to replace Q-tables for continuous state spaces.
+- Integrated experience replay buffers and target networks to stabilize DQN training.
+- Trained and evaluated DQNs in the CartPole environment using an epsilon-greedy policy and cumulative reward tracking.
+
+---
+
+## 🔑 What I Learned
+
+- Built advanced model architectures using Keras’s low-level APIs and custom logic.
+- Learned to train and evaluate CNNs, Transformers, autoencoders, GANs, and RL agents.
+- Used advanced tooling for optimization, including mixed precision, quantization, and distillation.
+- Applied reinforcement learning to practical environments using Deep Q-Networks and OpenAI Gym.
+
+---
