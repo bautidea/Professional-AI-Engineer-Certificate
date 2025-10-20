@@ -1,4 +1,6 @@
-# Multiple Input / Output Linear Regression — PyTorch Implementation
+# 📘 Module 3: Linear Regression PyTorch Way
+
+## Section 4: Multiple Input / Output Linear Regression
 
 ## Introduction
 

@@ -4,89 +4,80 @@ This repository documents my progress through the **"Introduction to Neural Netw
 
 PyTorch is one of the most in-demand technologies in AI development. It is widely used to design, train, and optimize neural networks in domains such as image recognition, natural language processing, and predictive analytics. This course provides a practical introduction to core neural network concepts using PyTorch, reinforced by hands-on labs and a final project.
 
----
+This course introduces the foundations of building and training neural networks using **PyTorch**. It begins with essential concepts such as **tensors**, **automatic differentiation**, and **datasets**, and progressively develops into more advanced topics such as **linear regression**, **gradient descent optimization**, and **classification with logistic regression**.
 
-## 📚 What I’m Learning
-
-By the end of this course, I will be able to:
-
-- Perform tensor operations and compute derivatives using PyTorch.
-- Implement linear and logistic regression models from scratch and using built-in modules.
-- Apply gradient descent for model training and optimization.
-- Handle datasets and data loaders for training loops and evaluation.
-- Build a complete machine learning pipeline for classification tasks using PyTorch.
+The progression ensures a step-by-step understanding of how PyTorch manages data, gradients, optimization, and model evaluation, preparing learners for deeper explorations into neural networks and modern deep learning workflows.
 
 ---
 
 ## 🧩 Course Modules
 
-### ✅ Module 1: Tensor and Dataset
+### 🛠 Module 1: Tensor and Dataset
 
-- Understand the basics of **1D tensors** and tensor operations in PyTorch.
-- Use built-in methods to classify tensor data types and structures.
-- Compute **simple and partial derivatives** using PyTorch’s autograd.
-- Build a **custom Dataset class and object**.
-- Create and prepare a dataset for **image-based tasks**.
+This module establishes the groundwork for PyTorch by introducing tensors, differentiation, and dataset handling.
 
-### ✅ Module 2: Linear Regression
+- **Tensors as Core Structures**  
+  Tensors represent all forms of data in PyTorch: feature vectors, matrices, images, or parameters. Operations include indexing, slicing, reshaping, broadcasting, and matrix multiplication. They can be seamlessly converted to and from NumPy arrays, enabling compatibility with the Python data ecosystem.
 
-- Learn the foundations of **linear regression and class-based modeling**.
-- Build prediction models using custom modules with `nn.Module`.
-- Calculate the **loss function** and define the **cost** of predictions.
-- Apply **gradient descent** manually to minimize the loss and train the model.
+- **Automatic Differentiation**  
+  PyTorch dynamically constructs computation graphs, enabling automatic differentiation. Attributes such as `grad`, `grad_fn`, and `requires_grad` allow the framework to compute derivatives and backpropagate through networks. This mechanism is the foundation of optimization in neural networks.
 
-### ✅ Module 3: Linear Regression the PyTorch Way
+- **Datasets and Transformations**  
+  Custom datasets are built by subclassing `torch.utils.data.Dataset`. Each dataset implements `__getitem__` for indexed access and `__len__` for sample count. Transformations can be applied using callable classes or composed pipelines (`transforms.Compose`) to normalize, augment, or modify samples before training.
 
-- Implement **stochastic gradient descent (SGD)** using PyTorch’s `DataLoader`.
-- Compare **Mini-Batch Gradient Descent** vs. **Stochastic Gradient Descent**.
-- Analyze **convergence rate** in different optimization strategies.
-- Use PyTorch’s **optimization modules** for cleaner model training.
-- Apply **best practices in data splitting** for model validation and evaluation.
+- **Image Datasets and TorchVision**  
+  TorchVision extends PyTorch for image tasks, providing prebuilt datasets like MNIST and Fashion-MNIST, as well as transformations (cropping, scaling, tensor conversion). Images are loaded dynamically, paired with labels, and transformed into tensors ready for model input.
 
-### ✅ Module 4: Multiple Input/Output Linear Regression
+**Key Takeaway:** Tensors are the backbone of PyTorch, automatic differentiation enables gradient-based learning, and datasets (structured or image-based) provide the standardized input pipelines for training neural networks.
 
-- Use the built-in `nn.Linear` class to perform **multi-dimensional linear regression**.
-- Work with multiple **input and output variables** in PyTorch models.
-- Understand and manipulate **model parameters** in multi-variate regression.
-- Apply **gradient descent** in the context of higher-dimensional data.
+### 📊 Module 2 – Linear Regression with PyTorch
 
-### ✅ Module 5: Logistic Regression for Classification
+This module introduces **linear regression** in PyTorch, moving from mathematical formulation to model implementation and training.
 
-- Explore the **theory of linear classifiers** and logistic regression.
-- Implement logistic regression models for **binary classification tasks**.
-- Learn about **Bernoulli Distribution** as a statistical foundation.
-- Understand and apply **Maximum Likelihood Estimation (MLE)** in PyTorch.
+- **Linear Regression Fundamentals**  
+  Linear regression models the relationship between input features and a target variable using weights and bias. Predictions are estimates (`ŷ`) produced through the equation of a line (1D) or hyperplane (multi-D). Training involves finding the parameters that minimize the error between predictions and actual values.
 
-### ✅ Module 6: Final Project – League of Legends Match Prediction
+- **Training with Gradient Descent**  
+  The training process is framed as minimizing a **cost function** (Mean Squared Error). Gradient descent iteratively updates parameters in the direction of decreasing error. The course demonstrates how both slope and bias contribute to shaping the prediction line.
 
-- Build a complete **logistic regression model** to predict the outcomes of **League of Legends matches**.
-- Apply all concepts learned across previous modules in a full pipeline.
-- Prepare and use real-world data for training and evaluation.
-- Export and share the project on **GitHub as a portfolio piece**.
+- **PyTorch Implementation**  
+  Using `nn.Linear`, models are created with defined input and output sizes. PyTorch manages forward passes, gradient tracking, and parameter updates. Custom modules subclassing `nn.Module` allow greater flexibility, enabling the combination of multiple components into more complex architectures.
 
----
+- **Optimization Concepts**  
+  Loss functions quantify prediction error, and optimizers like `torch.optim.SGD` update parameters efficiently. The course emphasizes how cost surfaces and gradients interact, visualizing parameter updates in relation to convergence.
 
-## 🛠️ Tools & Frameworks
+**Key Takeaway:** Linear regression provides the foundation for supervised learning, introducing cost functions, gradient descent, and parameter optimization in PyTorch.
 
-- **PyTorch**: Neural network library used for model building, training, and optimization.
-- **Python**: Core programming language for all model implementations.
-- **Git & GitHub**: Version control and collaboration platform used to organize and share work.
+### ⚡ Module 3 – Linear Regression PyTorch Way
 
----
+This module extends linear regression into more **efficient PyTorch workflows**, emphasizing optimization strategies, data handling, and scaling to more complex tasks.
 
-## 📦 Learning Methodology
+- **Stochastic and Mini-Batch Gradient Descent**  
+  Instead of processing the entire dataset at once (batch gradient descent), stochastic gradient descent (SGD) updates parameters using one sample at a time. Mini-batch gradient descent balances efficiency and stability by processing small subsets per iteration. PyTorch’s **DataLoader** automates batching and shuffling, critical for large datasets.
 
-- **Instructional videos** for conceptual understanding.
-- **Hands-on labs** to reinforce learning through code.
-- **Practice and graded quizzes** for self-assessment.
-- **Reference materials** including glossaries and cheat sheets.
-- A **culminating final project** to apply skills and build a shareable portfolio.
+- **Optimization in PyTorch**  
+  PyTorch optimizers (`torch.optim.SGD`, etc.) abstract gradient descent, managing parameter updates while keeping track of state. The training loop integrates predictions, loss calculation, backpropagation, and parameter updates in a consistent and modular manner.
+
+- **Training, Validation, and Test Splits**  
+  Proper data splitting ensures that models generalize to unseen data. Training sets adjust model parameters, validation sets tune hyperparameters, and test sets evaluate final performance. The module demonstrates how overfitting and underfitting manifest and how validation guides the selection of hyperparameters like learning rate and batch size.
+
+- **Multiple Input and Output Regression**  
+  Linear regression is extended to handle multiple predictors and multiple outputs simultaneously. PyTorch’s `nn.Linear` supports arbitrary input and output dimensions, while custom modules allow explicit definition of forward passes. Training procedures remain consistent, but tensor shapes scale with dimensionality.
+
+- **Logistic Regression for Classification**  
+  The transition from regression to classification introduces logistic regression, where outputs represent class probabilities via the **sigmoid function**. Theoretical foundations include the **Bernoulli distribution**, **maximum likelihood estimation (MLE)**, and **cross-entropy loss**. Logistic regression is implemented in PyTorch using both `nn.Sequential` and custom `nn.Module` definitions, bridging regression concepts with classification tasks.
+
+**Key Takeaway:** This module demonstrates how PyTorch streamlines model training, optimization, and evaluation, while scaling regression into multi-dimensional and classification contexts. It connects the mechanics of linear models with the broader landscape of supervised learning.
 
 ---
 
 ## 🚧 Status
 
-This repository is a **work in progress**. As I complete each module, I will publish:
+By completing the first three modules, the course has covered:
 
-- A full instructional resume (based on video transcripts).
-- Clean, documented source code from the hands-on labs.
+- How PyTorch represents and processes data using **tensors**.
+- How **gradients and automatic differentiation** enable training through backpropagation.
+- How to implement and train **linear regression models** with gradient descent.
+- How optimization strategies like **SGD, mini-batch processing, and optimizers** make training efficient.
+- How to prevent overfitting using **validation and test splits**.
+- How regression concepts extend to **multi-dimensional inputs/outputs** and evolve into **logistic regression for classification**.

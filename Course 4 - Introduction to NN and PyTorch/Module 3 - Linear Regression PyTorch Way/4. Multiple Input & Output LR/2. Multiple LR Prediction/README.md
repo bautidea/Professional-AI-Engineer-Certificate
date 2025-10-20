@@ -1,6 +1,6 @@
-# 📦 Module 4: Multiple Input / Output Linear Regression
+# 📦 Section 4: Multiple Input / Output Linear Regression
 
-## Section 1: Multiple Linear Regression Prediction
+## Multiple Linear Regression Prediction
 
 This section explores how to build and train multiple linear regression models using PyTorch. It introduces multi-dimensional input handling, efficient parameter usage, and how to define models both through built-in tools (`nn.Linear`) and custom class modules derived from `nn.Module`.
 

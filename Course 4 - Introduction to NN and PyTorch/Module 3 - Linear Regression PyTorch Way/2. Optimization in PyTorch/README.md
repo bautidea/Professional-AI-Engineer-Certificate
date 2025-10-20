@@ -1,4 +1,6 @@
-# 📦 Optimization in PyTorch
+# 📘 Module 3: Linear Regression PyTorch Way
+
+## 📦 Section 2: Optimization in PyTorch
 
 This section introduces how model parameters are updated using PyTorch's optimizer system. The training process is structured around a standardized workflow for building and optimizing models using PyTorch modules, autograd, and built-in optimizers.
 

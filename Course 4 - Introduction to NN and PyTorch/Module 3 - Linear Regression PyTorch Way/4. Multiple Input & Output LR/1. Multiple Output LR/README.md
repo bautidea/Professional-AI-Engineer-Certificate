@@ -1,6 +1,6 @@
-# 📦 Module 4: Multiple Input / Output Linear Regression
+# 📦 Section 4: Multiple Input / Output Linear Regression
 
-## Section 2: Multiple Output Linear Regression
+## Multiple Output Linear Regression
 
 ### Introduction
 
