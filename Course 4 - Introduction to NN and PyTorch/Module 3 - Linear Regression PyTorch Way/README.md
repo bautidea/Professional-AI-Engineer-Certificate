@@ -49,41 +49,6 @@ The module demonstrates how poor choices of validation strategies can lead to **
 
 Hyperparameters like learning rate, batch size, and number of epochs are explored in relation to their effect on validation outcomes, reinforcing best practices for robust training.
 
-### 🔹 Multiple Input and Output Linear Regression
-
-The module expands regression to **multi-dimensional inputs and outputs**:
-
-- **Multiple Input Regression**: Handles several predictor variables simultaneously, using vectorized dot products to compute predictions efficiently.
-- **Multiple Output Regression**: Extends the model to produce multiple outputs from the same input features by employing a matrix of weights and a vector of biases.
-
-PyTorch simplifies these implementations with `nn.Linear`, which can be configured with:
-
-- `in_features`: the number of input features (columns of `X`).
-- `out_features`: the number of output targets.
-
-Custom modules using `nn.Module` are also introduced, offering flexibility for defining forward passes and combining multiple layers, paving the way for more advanced neural network architectures.
-
-Training procedures remain consistent: forward pass, loss computation, backward pass, and optimizer step. What changes are tensor shapes and the way parameters are updated in multi-output cases.
-
-### 🔹 Logistic Regression for Classification
-
-The final part of the module introduces **logistic regression**, shifting focus from regression tasks (predicting continuous values) to **classification tasks** (predicting discrete class labels).
-
-Logistic regression is framed as a **linear classifier** combined with a **sigmoid (logistic) function** that maps raw scores into probabilities between 0 and 1. This allows outputs to be interpreted as probabilities of class membership.
-
-The theory behind logistic regression is grounded in:
-
-- **Bernoulli distribution**, which models binary outcomes.
-- **Maximum Likelihood Estimation (MLE)**, which guides parameter learning by maximizing the probability of observed data.
-- **Cross-Entropy Loss**, the cost function derived from the log-likelihood, designed to penalize misclassifications effectively and provide smooth gradients for training.
-
-PyTorch implementations of logistic regression use either:
-
-- **`nn.Sequential`**, which stacks a `Linear` layer and a `Sigmoid` activation.
-- **Custom `nn.Module` classes**, which explicitly define linear transformations and activations.
-
-This section establishes the bridge from linear regression to classification, a key step toward deeper models for supervised learning.
-
 ---
 
 ## ✅ Key Takeaways
@@ -91,5 +56,3 @@ This section establishes the bridge from linear regression to classification, a 
 - **SGD and Mini-Batch GD**: Fundamental optimization techniques that make large-scale training feasible by updating parameters with subsets of data.
 - **Optimizers in PyTorch**: Abstractions like `torch.optim.SGD` streamline training workflows and support advanced optimization strategies.
 - **Data Splitting**: Training, validation, and test sets are essential to prevent overfitting and ensure real-world performance.
-- **Multiple Regression**: Extending regression to multi-input and multi-output scenarios highlights the scalability of linear models in PyTorch.
-- **Logistic Regression**: A cornerstone of classification, combining linear decision boundaries with probabilistic interpretation via the sigmoid function and cross-entropy loss.
