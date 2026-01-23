@@ -1,3 +1,6 @@
 *.tar
 *.jpg
+*.keras
+*.h5
+*.pth
 images_dataSAT/
