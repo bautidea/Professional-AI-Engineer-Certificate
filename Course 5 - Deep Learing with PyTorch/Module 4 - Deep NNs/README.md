@@ -1,6 +1,6 @@
 # 🧠 Module 4 — Deep Neural Networks
 
-_Deep Learning with PyTorch_ :contentReference[oaicite:0]{index=0}
+_Deep Learning with PyTorch_
 
 ## 📘 Overview
 
